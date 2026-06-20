@@ -48,8 +48,8 @@ function LogoMesh({ mouseRef, prefersReducedMotion }: {
   return (
     <animated.group
       ref={groupRef}
-      position={springs.position as any}
-      scale={springs.scale as any}
+      position={springs.position as unknown as [number, number, number]}
+      scale={springs.scale as unknown as [number, number, number]}
     >
       <primitive object={scene} />
     </animated.group>

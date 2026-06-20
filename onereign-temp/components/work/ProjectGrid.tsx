@@ -32,7 +32,7 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
             border: '1px solid transparent',
             transition: 'border-color 300ms ease',
           }}
-          whileHover={{ borderColor: 'rgba(255,255,255,0.18)' } as any}
+          whileHover={{ borderColor: 'rgba(255,255,255,0.18)' }}
         >
           <span
             style={{

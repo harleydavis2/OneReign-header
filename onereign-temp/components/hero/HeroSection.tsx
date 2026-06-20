@@ -1,6 +1,5 @@
 'use client'
 import { useRef, useEffect } from 'react'
-import NavBar from './NavBar'
 import HeroText from './HeroText'
 
 export default function HeroSection() {
