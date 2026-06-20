@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #FFFFFF;
+  overflow-x: hidden;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #FFFFFF;
+  color: #0A0A0A;
+  overflow-x: hidden;
+}
+
+/* ─── GSAP marker suppression ─────────────────────────────────────────────── */
+/* Prevent GSAP ScrollTrigger markers from causing layout shifts in production */
+.gsap-marker-start,
+.gsap-marker-end,
+.gsap-marker-scroller-start,
+.gsap-marker-scroller-end {
+  display: none !important;
+}
+
+/* ─── Zero border-radius global enforcement ───────────────────────────────── */
+/* Non-negotiable: all elements have sharp edges */
+* {
+  border-radius: 0 !important;
+}
+
+/* ─── Scrollbar styling ───────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0A0A0A;
+}
+
+/* ─── Canvas transparency ─────────────────────────────────────────────────── */
+/* Force WebGL canvas to be transparent — needed for R3F Three.js scenes */
+canvas {
+  background: transparent !important;
+}
+
